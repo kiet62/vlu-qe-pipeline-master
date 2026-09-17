@@ -3,15 +3,17 @@ function login(username, password) {
         throw new Error("Username không được để trống");
     }
 
-    if (password === undefined || password === null || password === "") {
+    if (!password || password.trim() === "") {
         throw new Error("Password không được để trống");
     }
 
-    if (username === "admin" && password === "123") {
+    const normalizedUsername = username.trim();
+
+    if (normalizedUsername === "admin" && password === "9999") {
         return {
             success: true,
             message: "Đăng nhập thành công",
-            username: username
+            username: normalizedUsername
         };
     }
 
