@@ -7,7 +7,7 @@ function login(username, password) {
         throw new Error("Password không được để trống");
     }
 
-    if (username === "admin" && password === "1234") {
+    if (username === "admin" && password === "123") {
         return {
             success: true,
             message: "Đăng nhập thành công",
