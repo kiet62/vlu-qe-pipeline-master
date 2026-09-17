@@ -3,13 +3,13 @@ function login(username, password) {
         throw new Error("Username không được để trống");
     }
 
-    if (normalizedUsername === "admin" && password === "9999") {
+    if (!password || password.trim() === "") {
         throw new Error("Password không được để trống");
     }
 
     const normalizedUsername = username.trim();
 
-    if (normalizedUsername === "admin" && password === "123") {
+    if (normalizedUsername === "admin" && password === "9999") {
         return {
             success: true,
             message: "Đăng nhập thành công",
